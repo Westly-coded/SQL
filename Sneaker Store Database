@@ -1,0 +1,22 @@
+--Create a shoe store database 
+
+CREATE TABLE footlocker (id INTEGER PRIMARY KEY, name TEXT, size INTEGER, quantity INTEGER, color TEXT);
+
+INSERT INTO footlocker VALUES (1, "Dunks", 11, 100, "Blue Lobster");
+INSERT INTO footlocker VALUES (2, "1s", 12, 50, "Chicago");
+INSERT INTO footlocker VALUES (3, "Yeezys", 10, 0, "Grey");
+INSERT INTO footlocker VALUES (4, "Curry's", 8, 100, "Skittles");
+INSERT INTO footlocker VALUES (5, "Air Max", 4, 200, "Multi");
+INSERT INTO footlocker VALUES (6, "Timberlands", 6, 25, "Wheat");
+INSERT INTO footlocker VALUES (7, "Foams", 5, 50, "Galaxy");
+INSERT INTO footlocker VALUES (8, "Off White", 12, 30, "Black");
+INSERT INTO footlocker VALUES (9, "Ultra Boost", 7, 40, "White" );
+INSERT INTO footlocker VALUES (10, "af1", 10, 25, "White" );
+
+
+--Display the database ordered by quantity. 
+SELECT * FROM footlocker ORDER BY quantity;
+
+--Display the database's max quantity and group by size.
+SELECT name, MAX(quantity) FROM footlocker GROUP BY size
+
